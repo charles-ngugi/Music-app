@@ -18,7 +18,7 @@ class _homepageState extends State<homepage> {
               preferredSize: Size.fromHeight(45.0),
               child: AppBar(
                 title: const Text('Somwaki'),
-                backgroundColor: Colors.grey[500],
+                backgroundColor: Colors.redAccent,
                 centerTitle: true,
                 elevation: 0.0,
               ),
