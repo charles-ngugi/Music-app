@@ -25,18 +25,8 @@ class _homepageState extends State<homepage> {
   }
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      // backgroundColor: Colors.blueGrey,
-        appBar:
-            PreferredSize(
-              preferredSize: Size.fromHeight(45.0),
-              child: AppBar(
-                title: const Text('Somwaki'),
-                backgroundColor: Colors.orangeAccent,
-                centerTitle: true,
-                elevation: 0.0,
-              ),
-            ),
       body:
       Container(
         decoration: BoxDecoration(
@@ -47,6 +37,7 @@ class _homepageState extends State<homepage> {
         ),
         child:
         ListView(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
           children: <Widget>[
             Row(
               children: <Widget>[
@@ -58,13 +49,13 @@ class _homepageState extends State<homepage> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 70.0 ),
+                SizedBox(width: 50.0 ),
                 IconButton(
                   onPressed: (){},
                   icon: Icon(
                     Icons.circle_notifications,
                     color: Colors.white,
-                    size:35.0,
+                    size:30.0,
                   ),
                 ),
                 IconButton(
@@ -72,14 +63,14 @@ class _homepageState extends State<homepage> {
                   icon: Icon(
                     Icons.history_rounded,
                     color: Colors.white,
-                    size:35.0,),
+                    size:30.0,),
                 ),
                 IconButton(
                   onPressed: (){},
                   icon: Icon(
-                    Icons.settings_applications_rounded,
+                    Icons.settings,
                     color: Colors.white,
-                    size:35.0,),
+                    size:30.0,),
                 ),
               ],
             ),
@@ -169,7 +160,7 @@ class _homepageState extends State<homepage> {
               child: Text(
                 'Selection',
                 style: TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 20.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -260,7 +251,7 @@ class _homepageState extends State<homepage> {
               child: Text(
                 'Selection',
                 style: TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 20.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
