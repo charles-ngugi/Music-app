@@ -37,7 +37,7 @@ class _homepageState extends State<homepage> {
         ),
         child:
         ListView(
-          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
           children: <Widget>[
             Row(
               children: <Widget>[
@@ -95,7 +95,12 @@ class _homepageState extends State<homepage> {
                           fit: BoxFit.cover,
                           width: 160.0,
                         ),
-                        Text('Artist Name'),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Artist Name'),
+                          ],
+                        ),
                       ],
                     ),
                   ),
@@ -156,18 +161,6 @@ class _homepageState extends State<homepage> {
             ),
             ///end of first
             Container(
-              margin: const EdgeInsets.fromLTRB(10.0,0.0, 0.0,0.0),
-              child: Text(
-                'Selection',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-              // margin: const EdgeInsets.symmetric(vertical: 10.0),
               padding: EdgeInsets.only(top: 4.0),
               height: 200.0,
               child: ListView(
@@ -181,7 +174,29 @@ class _homepageState extends State<homepage> {
                     Column(
                       children: <Widget>[
                         Image.asset(
-                          'assets/images.jpg',
+                          'assets/wp.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Artist Name'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/wp.jpg',
                           height: 170.0,
                           fit: BoxFit.cover,
                           width: 160.0,
@@ -198,7 +213,7 @@ class _homepageState extends State<homepage> {
                     Column(
                       children: <Widget>[
                         Image.asset(
-                          'assets/images.jpg',
+                          'assets/wp.jpg',
                           height: 170.0,
                           fit: BoxFit.cover,
                           width: 160.0,
@@ -215,24 +230,7 @@ class _homepageState extends State<homepage> {
                     Column(
                       children: <Widget>[
                         Image.asset(
-                          'assets/images.jpg',
-                          height: 170.0,
-                          fit: BoxFit.cover,
-                          width: 160.0,
-                        ),
-                        Text('Artist Name'),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 10.0),
-                  Container(
-                    padding: EdgeInsets.only(top: 5.0),
-                    width: 160.0,
-                    child:
-                    Column(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images.jpg',
+                          'assets/wp.jpg',
                           height: 170.0,
                           fit: BoxFit.cover,
                           width: 160.0,
@@ -247,7 +245,7 @@ class _homepageState extends State<homepage> {
             ),
             ///end of 2nd
             Container(
-              margin: const EdgeInsets.fromLTRB(10.0,0.0, 0.0,0.0),
+              margin: const EdgeInsets.fromLTRB(5.0,0.0, 0.0,0.0),
               child: Text(
                 'Selection',
                 style: TextStyle(
@@ -258,7 +256,6 @@ class _homepageState extends State<homepage> {
               ),
             ),
             Container(
-              // margin: const EdgeInsets.symmetric(vertical: 10.0),
               padding: EdgeInsets.only(top: 4.0),
               height: 200.0,
               child: ListView(
@@ -272,7 +269,29 @@ class _homepageState extends State<homepage> {
                     Column(
                       children: <Widget>[
                         Image.asset(
-                          'assets/wp.jpg',
+                          'assets/images.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Artist Name'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images.jpg',
                           height: 170.0,
                           fit: BoxFit.cover,
                           width: 160.0,
@@ -289,7 +308,7 @@ class _homepageState extends State<homepage> {
                     Column(
                       children: <Widget>[
                         Image.asset(
-                          'assets/wp.jpg',
+                          'assets/images.jpg',
                           height: 170.0,
                           fit: BoxFit.cover,
                           width: 160.0,
@@ -306,24 +325,7 @@ class _homepageState extends State<homepage> {
                     Column(
                       children: <Widget>[
                         Image.asset(
-                          'assets/wp.jpg',
-                          height: 170.0,
-                          fit: BoxFit.cover,
-                          width: 160.0,
-                        ),
-                        Text('Artist Name'),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 10.0),
-                  Container(
-                    padding: EdgeInsets.only(top: 5.0),
-                    width: 160.0,
-                    child:
-                    Column(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/wp.jpg',
+                          'assets/images.jpg',
                           height: 170.0,
                           fit: BoxFit.cover,
                           width: 160.0,
@@ -337,6 +339,196 @@ class _homepageState extends State<homepage> {
               ),
             ),
             ///end of third
+            Container(
+              margin: const EdgeInsets.fromLTRB(5.0,0.0, 0.0,0.0),
+              child: Text(
+                'Selection',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 4.0),
+              height: 200.0,
+              child: ListView(
+                // This next line does the trick.
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/image.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Artist Name'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/image.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Text('Artist Name'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/image.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Text('Artist Name'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/image.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Text('Artist Name'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                ],
+              ),
+            ),
+            ///end of fourth
+            Container(
+              margin: const EdgeInsets.fromLTRB(5.0,0.0, 0.0,0.0),
+              child: Text(
+                'Selection',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 4.0),
+              height: 200.0,
+              child: ListView(
+                // This next line does the trick.
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/redish.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Artist Name'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/redish.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Text('Artist Name'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/redish.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Text('Artist Name'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                  Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    width: 160.0,
+                    child:
+                    Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/redish.jpg',
+                          height: 170.0,
+                          fit: BoxFit.cover,
+                          width: 160.0,
+                        ),
+                        Text('Artist Name'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10.0),
+                ],
+              ),
+            ),
+            ///end of fifth
           ],
         ),
       ),

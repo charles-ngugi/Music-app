@@ -47,7 +47,7 @@ class _somwakiState extends State<somwaki> {
         onTap: onTap,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.lightBlue,
         unselectedItemColor: Colors.black54,
         showSelectedLabels: true,
         // showUnselectedLabels: false,
@@ -58,14 +58,14 @@ class _somwakiState extends State<somwaki> {
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-                color: Colors.pinkAccent,
+                color: Colors.black,
               ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.search,
-              color: Colors.pinkAccent,
+              color: Colors.black,
             ),
             label: 'Search',
             // backgroundColor: Colors.blue,
@@ -73,7 +73,7 @@ class _somwakiState extends State<somwaki> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.library_music,
-              color: Colors.pinkAccent,
+              color: Colors.black,
             ),
             label: 'Library',
             // backgroundColor: Colors.blue,
@@ -81,7 +81,7 @@ class _somwakiState extends State<somwaki> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.account_box,
-              color: Colors.pinkAccent,
+              color: Colors.black,
             ),
             label: 'Profile',
             // backgroundColor: Colors.blue,
