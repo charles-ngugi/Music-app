@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:somwaki/Pages/homepage.dart';
 import 'package:somwaki/Pages/librarypage.dart';
 import 'package:somwaki/Pages/searchpage.dart';
-
 import 'Pages/accountpage.dart';
 
 void main() {
@@ -47,7 +46,7 @@ class _somwakiState extends State<somwaki> {
         currentIndex: currentindex,
         onTap: onTap,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.white,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.black54,
         showSelectedLabels: true,

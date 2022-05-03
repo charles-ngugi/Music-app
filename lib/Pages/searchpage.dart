@@ -48,7 +48,7 @@ class _searchpageState extends State<searchpage> {
                           // shadowColor: Colors.red,
                           elevation: 30.0,
                           child: ListTile(
-                            hoverColor: Colors.redAccent,
+                            hoverColor: Colors.white,
                           tileColor: Colors.blueGrey,
                           title: Text(snapshot.data[i].name),
                           subtitle: Text(snapshot.data[i].username),
