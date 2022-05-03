@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:somwaki/Pages/Widgets/BezierContainer.dart';
-import 'package:somwaki/Pages/homepage.dart';
-import 'loginPage.dart';
+import 'package:somwaki/Pages/accountpage.dart';
+import 'Widgets/BezierContainer.dart';
 
-class accountpage extends StatefulWidget {
-  const accountpage({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  LoginPage({Key? key, this.title}) : super(key: key);
+
+  final String? title;
 
   @override
-  State<accountpage> createState() => _accountpageState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _accountpageState extends State<accountpage> {
+class _LoginPageState extends State<LoginPage> {
   Widget _backButton() {
     return InkWell(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
+        Navigator.pop(context);
       },
+      ///backbutton
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: Row(
@@ -26,20 +27,20 @@ class _accountpageState extends State<accountpage> {
               child: Icon(
                 Icons.keyboard_arrow_left,
                 color: Colors.black,
-                size: 30.0,),
+                size: 30.0,
+              ),
             ),
             Text('Back',
-                style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w500))
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500))
           ],
         ),
       ),
     );
   }
+
   Widget _entryField(String title, {bool isPassword = false}) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 2),
+      margin: EdgeInsets.symmetric(vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -48,7 +49,7 @@ class _accountpageState extends State<accountpage> {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
           ),
           SizedBox(
-            height: 5,
+            height: 10,
           ),
           TextField(
               obscureText: isPassword,
@@ -80,18 +81,18 @@ class _accountpageState extends State<accountpage> {
               end: Alignment.centerRight,
               colors: [Color(0xfffbb448), Color(0xfff7892b)])),
       child: Text(
-        'Register Now',
+        'Login',
         style: TextStyle(fontSize: 20, color: Colors.white),
       ),
     );
   }
 
-  Widget _loginAccountLabel() {
+
+  Widget _createAccountLabel() {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => homepage())
-        );
+            context, MaterialPageRoute(builder: (context) => accountpage()));
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 20),
@@ -101,14 +102,14 @@ class _accountpageState extends State<accountpage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Already have an account ?',
+              'Don\'t have an account ?',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
             ),
             SizedBox(
               width: 10,
             ),
             Text(
-              'Login',
+              'Register',
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 13,
@@ -130,7 +131,6 @@ class _accountpageState extends State<accountpage> {
               fontWeight: FontWeight.w700,
               color: Color(0xffe46b10)
           ),
-
           children: [
             TextSpan(
               text: 'om',
@@ -147,24 +147,23 @@ class _accountpageState extends State<accountpage> {
   Widget _emailPasswordWidget() {
     return Column(
       children: <Widget>[
-        _entryField("Username"),
         _entryField("Email"),
         _entryField("Password", isPassword: true),
       ],
     );
   }
-  ///overriding begins
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      body:
-      Container(
+        body:
+        Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/pureorange.jpg"),
-            fit: BoxFit.cover,
-          ),
+        image: DecorationImage(
+        image: AssetImage("assets/pureorange.jpg"),
+        fit: BoxFit.cover,
+        ),
         ),
         child:
         Container(
@@ -172,10 +171,9 @@ class _accountpageState extends State<accountpage> {
           child: Stack(
             children: <Widget>[
               Positioned(
-                top: -MediaQuery.of(context).size.height * .15,
-                right: -MediaQuery.of(context).size.width * .4,
-                child: BezierContainer(),
-              ),
+                  top: -height * .15,
+                  right: -MediaQuery.of(context).size.width * .4,
+                  child: BezierContainer()),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: SingleChildScrollView(
@@ -185,16 +183,19 @@ class _accountpageState extends State<accountpage> {
                     children: <Widget>[
                       SizedBox(height: height * .2),
                       _title(),
-                      SizedBox(
-                        height: 50,
-                      ),
+                      SizedBox(height: 50),
                       _emailPasswordWidget(),
-                      SizedBox(
-                        height: 20,
-                      ),
+                      SizedBox(height: 20),
                       _submitButton(),
-                      SizedBox(height: height * .14),
-                      _loginAccountLabel(),
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        alignment: Alignment.centerRight,
+                        child: Text('Forgot Password ?',
+                            style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.w500)),
+                      ),
+                      SizedBox(height: height * .055),
+                      _createAccountLabel(),
                     ],
                   ),
                 ),
@@ -202,8 +203,8 @@ class _accountpageState extends State<accountpage> {
               Positioned(top: 40, left: 0, child: _backButton()),
             ],
           ),
+        )
         ),
-      ),
     );
   }
 }
